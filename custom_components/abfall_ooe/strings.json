@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "District",
+        "description": "Select the district (Bezirk) of your address.",
+        "data": { "district": "District" }
+      },
+      "city": {
+        "title": "Municipality",
+        "description": "District: {district}",
+        "data": { "city": "Municipality" }
+      },
+      "street": {
+        "title": "Street",
+        "description": "{city}, {district}",
+        "data": { "street": "Street" }
+      },
+      "house_number": {
+        "title": "House number",
+        "description": "{street}, {city}",
+        "data": { "house_number": "House number" }
+      },
+      "interval": {
+        "title": "Pickup interval",
+        "description": "{street} {house_number}, {city}\n\nSelect the residual waste (Restabfall) pickup interval of your household. Waste types with a single schedule are not affected.",
+        "data": { "interval": "Pickup interval" }
+      }
+    },
+    "abort": {
+      "already_configured": "This address is already configured.",
+      "cannot_connect": "Could not reach umweltprofis.at or could not read its response.",
+      "no_districts": "No districts found on umweltprofis.at.",
+      "no_cities": "No municipalities found for this district.",
+      "no_streets": "No streets found for this municipality.",
+      "no_house_numbers": "No house numbers found for this street.",
+      "no_pickups": "umweltprofis.at has no pickup dates for {street} {house_number}, {city}. Some statutory cities (e.g. Linz, Wels, Steyr) publish their calendars elsewhere."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Pickup interval",
+        "data": { "interval": "Pickup interval" }
+      }
+    },
+    "abort": {
+      "no_intervals": "This address has no selectable pickup intervals."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "next_pickup": { "name": "Next pickup" }
+    }
+  }
+}

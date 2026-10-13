@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Bezirk",
+        "description": "Wähle den Bezirk deiner Adresse.",
+        "data": { "district": "Bezirk" }
+      },
+      "city": {
+        "title": "Gemeinde",
+        "description": "Bezirk: {district}",
+        "data": { "city": "Gemeinde" }
+      },
+      "street": {
+        "title": "Straße",
+        "description": "{city}, {district}",
+        "data": { "street": "Straße" }
+      },
+      "house_number": {
+        "title": "Hausnummer",
+        "description": "{street}, {city}",
+        "data": { "house_number": "Hausnummer" }
+      },
+      "interval": {
+        "title": "Abfuhrintervall",
+        "description": "{street} {house_number}, {city}\n\nWähle das Abfuhrintervall für den Restabfall deines Haushalts. Abfallarten mit nur einem Termin-Rhythmus sind davon nicht betroffen.",
+        "data": { "interval": "Abfuhrintervall" }
+      }
+    },
+    "abort": {
+      "already_configured": "Diese Adresse ist bereits eingerichtet.",
+      "cannot_connect": "umweltprofis.at ist nicht erreichbar oder die Antwort konnte nicht gelesen werden.",
+      "no_districts": "Auf umweltprofis.at wurden keine Bezirke gefunden.",
+      "no_cities": "Für diesen Bezirk wurden keine Gemeinden gefunden.",
+      "no_streets": "Für diese Gemeinde wurden keine Straßen gefunden.",
+      "no_house_numbers": "Für diese Straße wurden keine Hausnummern gefunden.",
+      "no_pickups": "umweltprofis.at hat keine Abfuhrtermine für {street} {house_number}, {city}. Manche Statutarstädte (z. B. Linz, Wels, Steyr) veröffentlichen ihre Termine woanders."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Abfuhrintervall",
+        "data": { "interval": "Abfuhrintervall" }
+      }
+    },
+    "abort": {
+      "no_intervals": "Für diese Adresse gibt es keine wählbaren Abfuhrintervalle."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "next_pickup": { "name": "Nächste Abholung" }
+    }
+  }
+}

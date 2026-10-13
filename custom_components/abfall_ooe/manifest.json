@@ -1,0 +1,12 @@
+{
+  "domain": "abfall_ooe",
+  "name": "Abfall OÖ (Umweltprofis)",
+  "codeowners": ["@swagner"],
+  "config_flow": true,
+  "documentation": "https://github.com/swagner/ha-abfall-ooe",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/swagner/ha-abfall-ooe/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}
